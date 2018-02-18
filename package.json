@@ -1,0 +1,16 @@
+{
+  "name": "Schwein",
+  "version": "1.0.0",
+  "description": "Du Schwein!",
+  "license": "MIT",
+  "main": "main.js",
+  "devDependencies": {
+    "electron": "^1.8.2",
+    "electron-builder": "^20.0.5"
+  },
+  "scripts": {
+    "start": "electron main.js",
+    "package": "asar pack /Users/stefansl/Desktop/Ipek-darwin-x64/Ipek.app/Contents/Resources/app /Users/stefansl/Desktop/Ipek-darwin-x64/Ipek.app/Contents/Resources/app.asar && rm -R /Users/stefansl/Desktop/Ipek-darwin-x64/Ipek.app/Contents/Resources/app",
+    "build": "electron-packager . Ipek --ignore=node_modules/asar --platform=darwin --arch=x64 --icon=/Volumes/share/ipek/app/img/icon.png.icns --overwrite --out=/Users/stefansl/Desktop/"
+  }
+}
