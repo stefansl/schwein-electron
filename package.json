@@ -4,13 +4,19 @@
   "description": "Du Schwein!",
   "license": "MIT",
   "main": "main.js",
+  "icon": "app/img/icon.png.icns",
   "devDependencies": {
-    "electron": "^1.8.2",
-    "electron-builder": "^20.0.5",
+    "electron": "^1.8.6",
+    "electron-builder": "^20.11.1",
     "electron-installer-dmg": "latest"
   },
   "scripts": {
     "start": "electron main.js",
+    "pack": "build --dir",
     "publish": "build -p always"
+  },
+  "dmg": {
+    "background": "build/bg_dmg.tiff",
+    "icon": "app/img/icon.png.icns"
   }
 }
